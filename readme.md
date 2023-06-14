@@ -1,6 +1,6 @@
 # Django App
 
-This is a Django app that provides [brief description of the app].
+Challenge
 
 ## Installation and Setup
 
