@@ -47,7 +47,7 @@ def get_task(task_id, user_id):
 
 class TaskView(generics.RetrieveUpdateDestroyAPIView):
     permission_classes = [IsAuthenticated]
-
+    """Get, update or delete a task"""
     def get_task_not_found_response(self):
         return Response({"message": "Task not found"}, status=404)
 

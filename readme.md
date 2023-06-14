@@ -92,6 +92,44 @@ This is a Django app that provides [brief description of the app].
 
      docker exec -it <container_id> python manage.py test
 
+## URLS
+
+- /admin/ 
+    - for Administrators and super users managment
+- /auth/login/
+    - method: POST
+    - receives: email: str, password: str
+    - return access_token and refresh_token
+- /auth/register
+    - method: POST
+    - receives: name: str, email: str, password: str
+    - return user
+- /auth/refresh/  
+    - method: POST
+    - receives jwt
+    - returns access_token
+- /api/task/     - need jwt on headers
+    - method: POST
+    - receives: title: str, description: str
+    - returns task
+    -
+    - method: GET
+    - accepts: query params: title, description, created_at
+    - return list of task
+- /api/task/<id:int> - need jwt on headers
+    - method: GET
+    - returns task
+    - 
+    - method PUT
+    - receives: title:str, description:str
+    - returns task
+    - 
+    - method DELETE
+    - returns message
+- /api/task/<id:int>/complete - need jwt on headers
+    - method: PUT
+    - returns task
+
 ## CONDICIONES
 # Invera ToDo-List Challenge (Python/Django Jr-SSr)
 
