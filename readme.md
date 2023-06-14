@@ -105,29 +105,36 @@ Challenge
     - receives: name: str, email: str, password: str
     - return user
 - /auth/refresh/  
+    - Returns new jwt to keep connected 
     - method: POST
     - receives jwt
     - returns access_token
 - /api/task/     - need jwt on headers
+    - Create a task
     - method: POST
     - receives: title: str, description: str
     - returns task
     -
     - method: GET
+    - Search list of tasks of the login user
     - accepts: query params: title, description, created_at
     - return list of task
 - /api/task/<id:int> - need jwt on headers
+    - search task
     - method: GET
     - returns task
     - 
     - method PUT
+    - Update a task
     - receives: title:str, description:str
     - returns task
     - 
     - method DELETE
+    - Delete (changing flag)
     - returns message
 - /api/task/<id:int>/complete - need jwt on headers
     - method: PUT
+    - mark a task a commplete
     - returns task
 
 ## CONDICIONES
