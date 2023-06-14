@@ -8,7 +8,7 @@ Challenge
 
 1. Clone the repository:
 
-   git clone <repository_url>
+   git clone <https://github.com/BraianMilocco/todo-challenge.git>
 
 2. Change to the project directory:
 
